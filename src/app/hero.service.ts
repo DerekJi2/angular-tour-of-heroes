@@ -14,8 +14,15 @@ export class HeroService {
   servicePrefix = 'HeroService: ';
 
   getHeroes(): Observable<Array<Hero>> {
+    this.messageService.clear();
     this.messageService.add(this.servicePrefix + 'fetching heroes');
     return of(HEROES);
+  }
+
+  getHero(id: number): Observable<Hero> {
+    // TODO: send the message _after_ fetching the hero
+    this.messageService.add(this.servicePrefix + `fetching hero id=${id}`);
+    return of(HEROES.find(hero => hero.id === id));
   }
 }
 
