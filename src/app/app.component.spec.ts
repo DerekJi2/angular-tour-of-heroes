@@ -5,6 +5,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import {APP_BASE_HREF} from '@angular/common';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -19,6 +20,7 @@ describe('AppComponent', () => {
         AppComponent,
         HeroesComponent
       ],
+      providers: [{provide: APP_BASE_HREF, useValue : '/' }]
     }).compileComponents();
   }));
 
