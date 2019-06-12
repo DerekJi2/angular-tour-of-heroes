@@ -1,0 +1,24 @@
+<form [formGroup]="profile" (ngSubmit)="onSubmit()">
+
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+  <button type="submit" [disabled]="true">Submit</button>
+
+</form>
+
+<p>
+Form Value: {{ profile.value | json }}
+</p>
+
+<p>
+Form Status: {{ profile.status }}
+</p>
+
