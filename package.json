@@ -1,9 +1,9 @@
 {
-  "name": "ng2-apps",
+  "name": "angular-tour-of-heroes",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4300",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
